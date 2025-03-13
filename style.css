@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(image/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+
+p {
+    color: #fff;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 50px;
+    max-width: 80%;
+}
+
+.kotak-hidden {
+    display: flex;
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    justify-content: space-between;
+    width: 100%;
+    width: fit-content;
+    max-width: 400px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.kotak-hidden input {
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    font-family: 'Inter', sans-serif;
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+}
+
+.kotak-hidden button {
+    padding: 5px 12px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, opacity 0.3s;
+}
+
+.kotak-hidden button:hover {
+    transform: scale(1.1);
+    background-color: #333;
+}
+
+.kotak-hidden .search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.kotak-hidden .search img {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    width: 24px;
+}
+
+.kotak-hidden .search img:hover {
+    transform: rotate(20deg);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        height: 100vh;
+        padding: 20px;
+    }
+    .logo {
+        max-width: 60%;
+    }
+    .kotak-hidden {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .kotak-hidden input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .kotak-hidden .search {
+        justify-content: center;
+    }
+}
